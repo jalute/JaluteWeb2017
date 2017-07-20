@@ -1,0 +1,17 @@
+.welcome {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.main-picture {
+  width: 100%;
+  margin-top: -20px;
+}
+
+.my-content {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
