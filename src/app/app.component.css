@@ -15,4 +15,14 @@
   .world-logo-image {
     margin-left: 0em;
   }
+
+  .btn-link {
+    font-size: 22pt;
+    margin-top: -17px;
+  }
+
+  .dropdown-menu li {
+    font-size: 22px;
+    line-height: 2em;
+  }
 }

@@ -1,7 +1,10 @@
-<h4>Pay Table</h4>
-<table class="table">
-  <tr *ngFor="let winning of payTable">
-    <td>{{winning.hand}}</td>
-    <td class="pull-right">{{winning.payout}}</td>
-  </tr>
-</table>
+<div class="pay-table-container pull-right">
+  <h4 class="text-center">Pay Table</h4>
+  <hr>
+  <table>
+    <tr *ngFor="let winning of payTable">
+      <td>{{winning.hand}}</td>
+      <td class="pull-right">{{winning.payout}}</td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="hold-container text-center">{{card.hold}}</div>
+<div class="card-container">
+  <button id="btn-{{card.cardOutput}}"  class="flip-card" role="button" (click)="onCardClick(card)">
+    <div class="front {{card.color}}">
+      <div class="card-rank">{{valueOutput}}</div>
+      <div class="small-suit">{{suitOutput}}</div>
+      <div class="xlarge-suit">{{suitOutput}}</div>
+    </div>
+    <div class="back hidden">
+      <img src="assets/img/b2fv.png" >
+    </div>
+  </button>
+</div>

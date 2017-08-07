@@ -3,7 +3,8 @@ import { IVegasPayTable } from './vegas-pay-table';
 
 @Component({
   selector: 'pay-table',
-  templateUrl: 'pay-table.component.html'
+  templateUrl: 'pay-table.component.html',
+  styleUrls: ['pay-table.component.css']
 })
 
 export class PayTableComponent {

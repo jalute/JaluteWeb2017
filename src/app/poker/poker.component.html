@@ -1,54 +1,34 @@
-<h5 class="text-uppercase">{{pageTitle}}</h5>
-<h2>Jacks or Better</h2>
-<img src="assets\img\FourAces.png" class="poker-image pull-right">
-<div class="row">
-  <div class="col col-sm-3">
+<div class="container">
+  <h5 class="text-uppercase">{{pageTitle}}</h5>
+  <h1>Jacks or Better</h1>
+  <img src="assets\img\FourAces.png" class="poker-image pull-left">
+  <div class="pay-table-box pull-right">
     <pay-table></pay-table>
   </div>
-</div>
-<div class="row">
-  <div class="col col-sm-3">
-    <label class="label">Credits</label>
-    <span>{{credits}}</span>
+  <div class="credit-table-box">
+    <h4 class="text-center"><u>Credits</u></h4>
+    <span class="text-center">{{credits}}</span>
   </div>
-</div>
-
 
   <div class="row">
-    <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-sm-offset-1 col-lg-offset-0 col-md-offset-0">
-      <div class="row">
-        <div class="text-center">
-          <p class="practice-payout">{{handPayout}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 hold-container" *ngFor="let card of pokerHand">
-          <p class="card-hold text-center">{{card.hold}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 card-container"  *ngFor="let card of pokerHand">
-          <button id="btn-{{card.cardOutput}}"  class="flip-card" role="button" (click)="onCardClick(card)">
-            <div class="front {{card.color}}">
-              <div class="card-rank"><ai-card-value [cardValue]="card.Value"></ai-card-value></div>
-              <div class="small-suit"> <ai-suit [suit]="card.Suit"></ai-suit></div>
-              <div class="xlarge-suit"><ai-suit [suit]="card.Suit"></ai-suit></div>
-            </div>
-            <div class="back hidden">
-              <img src="assets/img/b2fv.png" >
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="row practice-button-row">
-        <div class="col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-4 col-xs-3"><button class="btn btn-primary btn-lg {{dealDisabled}}" id="btnDeal" (click)="onDealClick(deck)">Deal</button></div>
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><button class="btn btn-default btn-lg {{drawDisabled}}" id="btnDraw" (click)="onDrawClick(pokerHand, deck)">Draw</button></div>
-      </div>
+    <div class="text-center">
+      <p class="practice-payout" [innerHTML]="handPayout"></p>
     </div>
   </div>
 
+  <div class="hand-table-box">
+    <div class="row card-area {{grayArea}}">
+      <div class="col-xs-2"  *ngFor="let card of pokerHand">
+        <ai-card [card]="card"></ai-card>
+      </div>
+    </div>
+    <div class="row practice-button-row">
+      <div class="col-sm-7 col-xs-7 col-sm-offset-1">
+        <h5>Press Deal to begin playing, select which cards to hold, then press Draw. Bet is 1.</h5>
+      </div>
+      <div class="col-sm-4 col-xs-5 text-center">
+        <button class="btn btn-default btn-lg deal-button {{dealDisabled}}" id="btnDeal" (click)="onDealClick($event, deck,  pokerHand)">Deal</button>
+      </div>
+    </div>
+  </div>
+</div>

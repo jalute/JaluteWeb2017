@@ -164,11 +164,11 @@ export class PokerService {
     let result = this.evaluateHand(hand, false);
     //console.log("Evaluated hand: " + result);
 
-    let myOutput = "";
+    let myOutput = " ";
 
     switch(result) {
       case VegasPayoutHands.PaiGow:
-        myOutput = "";
+        myOutput = " ";
         break;
       case VegasPayoutHands.Flush:
         myOutput = "Flush";

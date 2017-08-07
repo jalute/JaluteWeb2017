@@ -8,8 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { PokerComponent} from "./poker/poker.component";
 import { PayTableComponent } from './pay-table/pay-table.component';
-import {SuitComponent} from "./poker/suit.component";
-import {CardValueComponent} from "./poker/card-value.component";
+import {CardComponent} from "./poker/card.component";
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import {CardValueComponent} from "./poker/card-value.component";
     ResumeComponent,
     PokerComponent,
     PayTableComponent,
-    SuitComponent,
-    CardValueComponent
+    CardComponent
   ],
   imports: [
     BrowserModule,
