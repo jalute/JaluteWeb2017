@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges} from "@angular/core";
-import {Card, Suits, CardValues} from "./card";
+import {Card, Suits} from "./card";
 
 @Component({
   selector: 'ai-card',
